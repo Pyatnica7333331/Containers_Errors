@@ -18,3 +18,11 @@ test('too many numbers', () => {
   const result = validated.validateUsername('the_Beast3685y');
   expect(result).toBe(false);
 });
+test('no exseptional symbols in the end', () => {
+  const result = validated.validateUsername('the_Super56');
+  expect(result).toBe(false);
+});
+test('no exseptional symbols in the end-2', () => {
+  const result = validated.validateUsername('the_Super56_');
+  expect(result).toBe(false);
+});
